@@ -1,6 +1,7 @@
 /*
 Permuted Congruential Generator
 https://en.wikipedia.org/wiki/Permuted_congruential_generator
+
 Note that this is _NOT_ intended for serious applications. Use this generator
 at your own risk and only use your own values instead of the default ones if
 you really know what you are doing.
@@ -18,7 +19,7 @@ pub struct IterMut<'a> {
     pcg: &'a mut PCG32,
 }
 
-impl PCG321 {
+impl PCG32 {
     /// `stream` should be less than 1 << 63
     pub fn new(seed: u64, multiplier: u64, stream: u64) -> Self {
         // We should make sure that increment is odd
