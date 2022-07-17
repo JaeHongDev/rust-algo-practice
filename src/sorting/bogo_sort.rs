@@ -4,7 +4,7 @@ use std::time::{SystemTime, UNIX_EPOCH};
 
 const DEFAULT: u64 = 4294967296;
 
-fn is_sorted<T: Ord>(arr: &[T], len: usize) -> bool {
+pub fn is_sorted<T: Ord>(arr: &[T], len: usize) -> bool {
     for i in 0..len - 1 {
         if arr[i] > arr[i + 1] {
             return false;
